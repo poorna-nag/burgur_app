@@ -5,3 +5,5 @@ class LoadProductEvent extends HomeEvent {}
 class ShowDetailPeoductEvent extends HomeEvent {}
 
 class AddItemToCartEvent extends HomeEvent {}
+
+class MoveToHomeEvent extends HomeEvent {}

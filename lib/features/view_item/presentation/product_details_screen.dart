@@ -67,12 +67,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       const SizedBox(height: 20),
                       FilledButton(
                         onPressed: () {
-                          // setState(() {
-                          //   if (widget.product.productId == 0) {
-                          //     cartItems.add(widget.product);
-                          //   }
-                          // });
-
                           context.read<CartBloc>().add(
                             GetCartProductEvent(product: widget.product),
                           );
@@ -92,8 +86,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ),
                         child: const Text("Add to Cart"),
                       ),
+                     
                     ],
                   ),
+                  
                 ),
               );
             },
@@ -103,3 +99,48 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 }
+//  class _ItemViewMorState extends StatefulWidget {
+//   const _ItemViewMorState({super.key});
+
+//   @override
+//   State<_ItemViewMorState> createState() => __ItemViewMorStateState();
+// }
+
+// class __ItemViewMorStateState extends State<_ItemViewMorState> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//                 children: [
+//                   Image.network(product.imageUrl),
+//                   SizedBox(height: 5),
+
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: Row(
+//                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                       children: [
+//                         Text(
+//                           product.pName,
+//                           style: TextStyle(
+//                             fontSize: 22,
+//                             fontWeight: FontWeight.w600,
+//                           ),
+//                         ),
+//                         IconButton.filled(
+//                           onPressed: () {
+//                             context.read<CartBloc>().add(
+//                               GetCartProductEvent(product: widget.item[index]),
+//                             );
+//                           },
+//                           icon: Text(
+//                             "ADD",
+//                             style: TextStyle(color: Colors.white),
+//                           ),
+//                         ),
+//                       ],
+//                     ),
+//                   ),
+//                 ],
+//               );
+//   }
+// }

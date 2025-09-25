@@ -1,4 +1,5 @@
 import 'package:burget_app_ui/features/cart/presentation/bloc/cart_bloc.dart';
+import 'package:burget_app_ui/features/check_out_page/presentation/bloc/check_out_bloc.dart';
 import 'package:burget_app_ui/features/home/presentation/bloc/home_bloc.dart';
 import 'package:burget_app_ui/features/home/presentation/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class MainApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => HomeBloc()),
         BlocProvider(create: (context) => CartBloc()),
+        BlocProvider(create: (context) => CheckOutBloc()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

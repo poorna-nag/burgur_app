@@ -1,7 +1,6 @@
 import 'package:burget_app_ui/features/cart/presentation/bloc/cart_bloc.dart';
 import 'package:burget_app_ui/features/cart/presentation/bloc/cart_event.dart';
 import 'package:burget_app_ui/features/cart/presentation/cart_screen.dart';
-
 import 'package:burget_app_ui/features/home/data/product_model.dart';
 import 'package:burget_app_ui/features/home/presentation/bloc/home_bloc.dart';
 import 'package:burget_app_ui/features/home/presentation/bloc/home_event.dart';
@@ -36,10 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             onPressed: () {
-              // context.read<HomeBloc>().add(AddItemToCartEvent());
+              // context.read<CartBloc>().add(GoToCartEvent());
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => const CartScreen()),
+                MaterialPageRoute(builder: (_) => CartScreen()),
               );
             },
             icon: Icon(Icons.shop_two),

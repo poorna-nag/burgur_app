@@ -25,3 +25,7 @@ class DeleteAllEvent extends CartEvent {
 
   DeleteAllEvent({required this.product});
 }
+
+class CartCheckOut extends CartEvent {}
+
+class GoToCartEvent extends CartEvent {}
